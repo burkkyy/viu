@@ -1,0 +1,4 @@
+- picture of circit
+- pin out table
+- functional diagram
+- logical diagram
