@@ -62,15 +62,28 @@ class LinkedList {
     // return false if oldData doesn't exist in the list
     // or if the list already full
     bool insertAfter(double oldData, double newData){
-      (void)oldData;
-      (void)newData;
+      int parentIndex = find(oldData);
+
+      // look for an open spot
+      for(int i = 0; i < this->capacity; i++){
+        if(this->DataPile[i].next == -1){
+          this->DataPile[i].data = newData;
+          this->DataPile[i].next = this->DataPile[parentIndex].next;
+          this->DataPile[parentIndex].next = i;
+
+          this->size++;
+          return true;
+        }
+      }
+
       return false;
     }
 
     // return false if data doesn't exist in the list
     bool remove(double data){
-      // find index of data
-      for(int i = 0; i < this->size; i++){
+      int i = 0;
+      
+      do {
         int nextIndex = this->DataPile[i].next;
 
         if(this->DataPile[nextIndex].data == data){
@@ -88,7 +101,9 @@ class LinkedList {
           this->size--;
           return true;
         }
-      }
+
+        i = this->DataPile[i].next;
+      } while(i != 0);
 
       return false;
     }
@@ -102,11 +117,11 @@ class LinkedList {
 
       // skip dummy node
       int i = this->DataPile[0].next;
-      
-      do {
+
+      while(i != 0){
         std::cout << "Cell{ data: " << this->DataPile[i].data << ", next: " << this->DataPile[i].next << " } --> ";
         i = this->DataPile[i].next;
-      } while(i != 0);
+      }
 
       std::cout << "EMPTY" << std::endl;
     }
@@ -137,28 +152,45 @@ int main(int argc, const char** argv){
 
   assert(list.insert(11.0));
   assert(list.insert(-12.0));
-  assert(list.insert(0.0));
   assert(list.insert(9871.142));
-  assert(list.insert(3.0));
-  assert(list.insert(2.0));
+
+  P("insert after -12");
+  assert(list.insertAfter(-12.0, 3.0));
   list.traverse();
 
-  P("Remove 0.0");
-  list.remove(0.0);
+  P("insert after 11.0");
+  assert(list.insertAfter(11.0, 2.0));
   list.traverse();
 
   P("Remove -12");
-  list.remove(-12.0);
+  assert(list.remove(-12.0));
   list.traverse();
-
 
   P("Remove first node");
-  list.remove(11.0);
+  assert(list.remove(11.0));
   list.traverse();
 
-
   P("Remove 2");
-  list.remove(2.0);
+  assert(list.remove(2.0));
+  list.traverse();
+
+  P("Insert 15");
+  assert(list.insert(15.0));
+  list.traverse();
+
+  P("Remove 15");
+  assert(list.remove(15.0));
+  list.traverse();
+
+  P("Remove 3");
+  assert(list.remove(3.0));
+  list.traverse();
+
+  P("Remove 0, bad val");
+  assert(list.remove(0) == false);
+
+  P("Remove 9871.14");
+  assert(list.remove(9871.142));
   list.traverse();
 
   return 0;
