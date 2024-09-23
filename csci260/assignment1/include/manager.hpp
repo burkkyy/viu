@@ -17,7 +17,7 @@ public:
   Manager& operator=(const Manager&) = delete;
 
   Manager();
-  ~Manger();
+  ~Manager();
 
   void print_jobs() const;
 

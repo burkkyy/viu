@@ -20,16 +20,16 @@ public:
   PriorityQueue();
   ~PriorityQueue();
 
-  void insert(Node item);
-  void remove(uint32_t key);
-  void min_key();
-  void min_element();
-  void remove_min();
-  void size();
-  void is_empty();
-  void is_full();
-
-  void sort(T A, int N);
+  bool insert(Node item);
+  bool remove(uint32_t key);
+  uint32_t min_key();
+  uint32_t min_element();
+  bool remove_min();
+  uint32_t length();
+  bool is_empty();
+  bool is_full();
+  void traverse();
+  bool sort();
 
 private:
   std::vector<T> data;
