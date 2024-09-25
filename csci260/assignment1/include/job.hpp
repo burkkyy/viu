@@ -23,11 +23,12 @@ public:
   Job(double time, double estimated_execution_time, uint16_t uid, std::string command_name, std::string resource_list);
   ~Job();
 
-  void print() const;
+  void execute(){ this->print(); }
 
 private:
   void initialize();
   std::string json() const;
+  void print() const;
 
   Level level;
   double estimated_execution_time;

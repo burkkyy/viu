@@ -1,4 +1,5 @@
 # CSCI 260 Assignment 1
+
 ## Specification
 
 ## Design
@@ -15,3 +16,6 @@
 
 ## Note
 
+## Authors
+
+Caleb Burke

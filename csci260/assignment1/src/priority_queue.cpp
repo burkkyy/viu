@@ -10,7 +10,23 @@
 namespace adt {
 
 template<typename T>
-bool PriorityQueue<T>::insert(Node item){
+PriorityQueue<T>::PriorityQueue(){
+    this->initialize();
+}
+
+template<typename T>
+PriorityQueue<T>::~PriorityQueue(){
+
+}
+
+template<typename T>
+void PriorityQueue<T>::initialize(){
+
+}
+
+template<typename T>
+bool PriorityQueue<T>::insert(uint32_t key, T value){
+    Node item = {key, value};
     // if tree is empty just make root node the new node
     if(this->empty()){
         this->data[i]  = item;
@@ -31,7 +47,7 @@ bool PriorityQueue<T>::insert(Node item){
 }
 
 template<typename T>
-bool PriorityQueue<T>::remove(uint32_t key){
+T PriorityQueue<T>::remove(uint32_t key){
     // simply set the key to -1 and let sort() fix the tree
     for(auto& i :: this->data){
         if(i.key == key){
@@ -43,13 +59,18 @@ bool PriorityQueue<T>::remove(uint32_t key){
 }
 
 template<typename T>
-uint32_t PriorityQueue<T>::min_key(){
+T PriorityQueue<T>::removeIndex(int index){
+    return false;
+}
+
+template<typename T>
+uint32_t PriorityQueue<T>::minKey(){
     return this->data[0].key;
 }
 
 // returns key of element with smallest value
 template<typename T>
-uint32_t PriorityQueue<T>::min_element(){
+uint32_t PriorityQueue<T>::minElement(){
     if(this->empty()){
         throw "Empty tree";
     }
@@ -58,35 +79,35 @@ uint32_t PriorityQueue<T>::min_element(){
 }
 
 template<typename T>
-bool PriorityQueue<T>::remove_min(){
-    uint32_t key = this->min_key();
+T PriorityQueue<T>::removeMin(){
+    uint32_t key = this->minKey();
     return this->remove(key);
 }
 
 template<typename T>
-uint32_t PriorityQueue<T>::length(){
+int PriorityQueue<T>::length(){
     return this->size;
 }
 
 template<typename T>
-bool PriorityQueue<T>::is_empty(){
+bool PriorityQueue<T>::isEmpty(){
     return this->empty;
 }
 
 template<typename T>
-bool PriorityQueue<T>::is_full(){
+bool PriorityQueue<T>::isFull(){
     return this->full;
 }
 
 template<typename T>
-void PriorityQueue<T>::traverse(){
+void PriorityQueue<T>::traverse() const{
     // get number of levels for formatting the output better
     int levels = std::floor(std::log2(this->length())) + 1;
 
     for(int i = 0; i < levels; i++){
         int elements = 1 << i;
         for(int j = i; j < elements; j++){
-            std::cout << this->data[j].key << " " << this->data[j].value << "\t";
+            std::cout << this->data[j].key << " " << "SOMEVALUE" << "\t";
         }
         std::cout << std::endl;
         

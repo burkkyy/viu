@@ -8,6 +8,7 @@
 #include <cstdint>
 
 #include "job.hpp"
+#include "priority_queue.hpp"
 
 namespace job {
 
@@ -28,6 +29,8 @@ public:
 
 private:
   void initialize();
+
+  adt::PriorityQueue<Job> queue;
 };
 
 } // namespace job

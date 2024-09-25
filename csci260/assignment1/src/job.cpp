@@ -18,7 +18,7 @@ Job::~Job(){
 }
 
 void Job::initialize(){
-
+  throw "Not implemented";
 }
 
 void Job::print() const {
