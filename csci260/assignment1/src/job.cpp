@@ -8,7 +8,7 @@
 
 namespace job {
 
-Job::Job(double time, double estimated_execution_time, uint16_t uid, std::string command_name, std::string resource_list) : estimated_execution_time(estimated_execution_time), uid(uid), command_name(command_name), resource_list(resource_list) {
+Job::Job(double estimated_execution_time, uint16_t uid, std::string command_name, std::string resource_list) : estimated_execution_time(estimated_execution_time), uid(uid), command_name(command_name), resource_list(resource_list) {
   initialize(); 
 }
 
@@ -42,4 +42,3 @@ std::string Job::json() const {
 }
 
 } // namespace job
-

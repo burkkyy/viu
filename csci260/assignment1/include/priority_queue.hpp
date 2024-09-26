@@ -24,23 +24,21 @@ public:
   T remove(uint32_t key);
   T removeIndex(int index);
   uint32_t minKey();
-  uint32_t minElement();
+  T minElement();
   T removeMin();
-  int length();
-  bool isEmpty();
-  bool isFull();
+  int length() const { return this->size; }
+  bool isEmpty() const { return this->empty; }
+  bool isFull() const { return this->full; }
   void traverse() const;
-  bool sort();
 
 private:
   void initialize();
 
   const int MAX_SIZE = 64;
-  std::vector<T> data(MAX_SIZE);
+  std::vector<Node> data;
   int size;
   bool empty;
   bool full;
 };
 
 }  // namespace adt
-

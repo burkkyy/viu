@@ -15,16 +15,16 @@ Manager::~Manager(){
     
 }
 
-void Manager::print_jobs() const {
+void Manager::printJobs() const {
     queue.traverse();
 }
 
-void Manager::submit(double time, double estimated_execution_time, uint16_t uid, std::string command_name, std::string resource_list){
+void Manager::submit(double estimated_execution_time, uint16_t uid, std::string command_name, std::string resource_list){
     // ask for input?
 
     // calculate priority
     uint32_t priority = 0.0f;
-    if(queue.insert(priority, {time, estimated_execution_time, uid, command_name, resource_list})){
+    if(queue.insert(priority, {estimated_execution_time, uid, command_name, resource_list})){
 
     } else {
         std::cout << "Insert into job queue failed.";
@@ -71,7 +71,7 @@ void Manager::quit(){
 }
 
 void Manager::initialize(){
-    throw "Not implemented";
+    
 }
 
 }  // namespace job

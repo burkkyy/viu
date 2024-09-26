@@ -18,10 +18,10 @@ $(TARGET): main.cpp $(OBJECT_FILES)
 	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) $^ -o $@
 
 .PHONY: all clean
+all: $(OBJECT_FILES)
 all: $(TARGET)
 
 clean:
 	@-rm -rf build/ 2>/dev/null
 	@-rm *.bin 2>/dev/null
 	@-rm $(TARGET) 2>/dev/null
-

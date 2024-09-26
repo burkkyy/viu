@@ -5,6 +5,9 @@
 */
 #include "priority_queue.hpp"
 
+#include "job.hpp"
+
+#include <iostream>
 #include <cmath>
 
 namespace adt {
@@ -27,19 +30,23 @@ void PriorityQueue<T>::initialize(){
 template<typename T>
 bool PriorityQueue<T>::insert(uint32_t key, T value){
     Node item = {key, value};
+    
     // if tree is empty just make root node the new node
-    if(this->empty()){
-        this->data[i]  = item;
+    if(this->isEmpty()){
+        this->data[0] = item;
         return true;
     }
 
     // itter through array for empty spot, then let sort fix the tree
-    for(auto& i :: this->data){
+    for(Node& i : this->data){
         std::cout << i.key << " " << i.value << std::endl;
 
-        if(i.key == -1){
+        if(i.key == 1){
             i = item;
-            return this->sort();
+
+            // sort 
+
+            return true;
         }
     }
 
@@ -49,18 +56,18 @@ bool PriorityQueue<T>::insert(uint32_t key, T value){
 template<typename T>
 T PriorityQueue<T>::remove(uint32_t key){
     // simply set the key to -1 and let sort() fix the tree
-    for(auto& i :: this->data){
+    for(Node& i : this->data){
         if(i.key == key){
-            i.key = -1;
-            return this->sort();
+            return i.value;
         }
     }
-    return false;
+    throw "Key not in queue";
 }
 
 template<typename T>
 T PriorityQueue<T>::removeIndex(int index){
-    return false;
+    (void)index;
+    throw "Not implemented";
 }
 
 template<typename T>
@@ -68,10 +75,9 @@ uint32_t PriorityQueue<T>::minKey(){
     return this->data[0].key;
 }
 
-// returns key of element with smallest value
 template<typename T>
-uint32_t PriorityQueue<T>::minElement(){
-    if(this->empty()){
+T PriorityQueue<T>::minElement(){
+    if(this->isEmpty()){
         throw "Empty tree";
     }
 
@@ -85,24 +91,10 @@ T PriorityQueue<T>::removeMin(){
 }
 
 template<typename T>
-int PriorityQueue<T>::length(){
-    return this->size;
-}
-
-template<typename T>
-bool PriorityQueue<T>::isEmpty(){
-    return this->empty;
-}
-
-template<typename T>
-bool PriorityQueue<T>::isFull(){
-    return this->full;
-}
-
-template<typename T>
-void PriorityQueue<T>::traverse() const{
+void PriorityQueue<T>::traverse() const {
     // get number of levels for formatting the output better
-    int levels = std::floor(std::log2(this->length())) + 1;
+    int len = this->length();
+    int levels = std::floor(std::log2(len)) + 1;
 
     for(int i = 0; i < levels; i++){
         int elements = 1 << i;
@@ -121,9 +113,6 @@ void PriorityQueue<T>::traverse() const{
     std::cout << std::endl;
 }
 
-template<typename T>
-bool PriorityQueue<T>::sort(){
-    
 }
 
-}
+template class adt::PriorityQueue<job::Job>;

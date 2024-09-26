@@ -20,9 +20,9 @@ public:
   Manager();
   ~Manager();
 
-  void print_jobs() const;
+  void printJobs() const;
 
-  void submit(double time, double estimated_execution_time, uint16_t uid, std::string command_name, std::string resource_list);
+  void submit(double estimated_execution_time, uint16_t uid, std::string command_name, std::string resource_list);
   void execute();
   void lottery();
   void quit();
@@ -34,4 +34,3 @@ private:
 };
 
 } // namespace job
-
