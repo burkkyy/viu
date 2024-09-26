@@ -153,16 +153,21 @@ void PriorityQueue<T>::sort(){
 
     // this loop is O(n / 2 - 1) = O(n)
     for(int i = n / 2 - 1; i >= 0; i--){
-        this->heapify(n, i); // O(log n)
-    }
+        this->heapify(n, i); // each call is O(log n)
+    } // overall O(n)
 
     // this loop is O(n - 1) = O(n)
     for(int i = n - 1; i > 0; i--){
         std::swap(this->data[0], this->data[i]);
         this->heapify(i, 0); // O(log n)
     }
-    
-    // calling a O(log n) function n times, therefore sort() has O(n log n)
+
+    /*
+    Overall time complexity:
+        - O(n) for "building" the heap
+        - O(n log n) for sorting
+    Therefore O(n log n) overall
+    */
 }
 
 }
