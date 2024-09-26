@@ -29,6 +29,7 @@ public:
 
 private:
   void initialize();
+  uint32_t calculatePriority(uint16_t uid, double estimated_execution_time);
 
   adt::PriorityQueue<Job> queue;
 };

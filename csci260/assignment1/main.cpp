@@ -9,19 +9,66 @@ int main(int argc, const char** argv){
   try {
     job::Manager manager;
     
-    manager.submit(0.1, 100, "echo 1", "");
-    manager.submit(1.0, 100, "ls -al", "");
-    manager.submit(10.0, 100, "printenv", "");
-    manager.submit(0.1, 100, "su root", "");
-    manager.submit(0.0, 100, "du -ahc", "");
+    manager.submit(0.8, 1000, "echo 1", "");
+    manager.printJobs();
+
+    manager.submit(0.3, 1000, "ls -al", "");
+    manager.printJobs();
+
+    manager.submit(0.8, 1000, "printenv", "");
+    manager.printJobs();
+
+    manager.submit(0.5, 0, "su root", "");
+    manager.printJobs();
+
+    manager.submit(1.0, 200, "du -ahc", "");
+    manager.printJobs();
+
+    manager.submit(0.8, 200, "du -ahc", "");
+    manager.printJobs();
+
+    manager.submit(0.7, 200, "du -ahc", "");
+    manager.printJobs();
+
+    manager.submit(0.6, 200, "du -ahc", "");
+    manager.printJobs();
+
+    manager.submit(0.9, 200, "du -ahc", "");
+    manager.printJobs();
+
+    manager.submit(0.8, 200, "du -ahc", "");
+    manager.printJobs();
+
+    manager.submit(0.0, 200, "du -ahc", "");
+    manager.printJobs();
+
+    manager.submit(0.1, 200, "du -ahc", "");
     manager.printJobs();
 
     manager.execute();
+    manager.printJobs();
+
+    manager.execute();
+    manager.printJobs();
+
+    manager.execute();
+    manager.printJobs();
+
     manager.lottery();
-    manager.execute();
-    manager.execute();
     manager.printJobs();
 
+    manager.lottery();
+    manager.printJobs();
+
+    manager.lottery();
+    manager.printJobs();
+
+    manager.lottery();
+    manager.printJobs();
+
+    manager.lottery();
+    manager.printJobs();
+    
     manager.quit();
   } catch (const char* e){
     std::cout << e << std::endl;

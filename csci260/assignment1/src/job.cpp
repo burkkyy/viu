@@ -8,8 +8,8 @@
 
 namespace job {
 
-Job::Job(double estimated_execution_time, uint16_t uid, std::string command_name, std::string resource_list) : estimated_execution_time(estimated_execution_time), uid(uid), command_name(command_name), resource_list(resource_list) {
-  initialize(); 
+Job::Job(double estimated_execution_time, uint16_t uid, std::string command_name, std::string resource_list, uint32_t priority) : estimated_execution_time(estimated_execution_time), uid(uid), command_name(command_name), resource_list(resource_list), priority(priority) {
+  initialize();
 }
 
 
@@ -18,7 +18,7 @@ Job::~Job(){
 }
 
 void Job::initialize(){
-  throw "Not implemented";
+  this->uid < 1000 ? this->level = Level::SYSTEM : this->level = Level::USER;
 }
 
 void Job::print() const {
@@ -37,7 +37,7 @@ std::string Job::json() const {
   };
 
   std::stringstream buffer;
-  buffer << "Job {\n\tLevel: " << level_to_string() << ",\n\tUID: " << this->uid << ",\n\tEstimated Execution time (S): " << this->estimated_execution_time << ",\n\tPriority: " << this->priority << ",\n\tCommand Name: \"" << this->command_name << "\",\n\tResource List: \"" << this->resource_list << "\"\n}\n";
+  buffer << "Job {\n\tPriority: " << this->priority << ",\n\tLevel: " << level_to_string() << ",\n\tUID: " << this->uid << ",\n\tEstimated Execution time (S): " << this->estimated_execution_time << ",\n\tCommand Name: \"" << this->command_name << "\",\n\tResource List: \"" << this->resource_list << "\"\n}\n";
   return buffer.str();
 }
 

@@ -17,16 +17,16 @@ public:
     USER,
   };
 
-  Job(double estimated_execution_time, uint16_t uid, std::string command_name, std::string resource_list);
+  Job(double estimated_execution_time, uint16_t uid, std::string command_name, std::string resource_list, uint32_t priority);
   ~Job();
 
   Job(const Job& other)
     : level(other.level),
       estimated_execution_time(other.estimated_execution_time),
       uid(other.uid),
-      priority(other.priority),
       command_name(other.command_name),
-      resource_list(other.resource_list) {}
+      resource_list(other.resource_list),
+      priority(other.priority) {}
 
   Job& operator=(const Job& other) {
     if (this == &other) {
@@ -36,9 +36,9 @@ public:
     this->level = other.level;
     this->estimated_execution_time = other.estimated_execution_time;
     this->uid = other.uid;
-    this->priority = other.priority;
     this->command_name = other.command_name;
     this->resource_list = other.resource_list;
+    this->priority = other.priority;
 
     return *this;
   }
@@ -58,9 +58,9 @@ private:
   Level level;
   double estimated_execution_time;
   uint16_t uid;
-  double priority;
   std::string command_name; // ???
   std::string resource_list; // ???
+  uint32_t priority;
 };
 
 } // namespace job

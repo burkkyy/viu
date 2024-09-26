@@ -8,6 +8,7 @@
 #include "job.hpp"
 
 #include <iostream>
+#include <algorithm>
 #include <cmath>
 
 namespace adt {
@@ -24,64 +25,90 @@ PriorityQueue<T>::~PriorityQueue(){
 
 template<typename T>
 void PriorityQueue<T>::initialize(){
-
+    
 }
 
 template<typename T>
 bool PriorityQueue<T>::insert(uint32_t key, T value){
-    Node item = {key, value};
-    
-    // if tree is empty just make root node the new node
-    if(this->isEmpty()){
-        this->data[0] = item;
+    if(this->isFull()){
+        return false;
+    } else if(this->size < this->MAX_SIZE){        
+        this->data.push_back({key, value});
+        this->size++;
+        this->sort();
         return true;
     }
-
-    // itter through array for empty spot, then let sort fix the tree
-    for(Node& i : this->data){
-        std::cout << i.key << " " << i.value << std::endl;
-
-        if(i.key == 1){
-            i = item;
-
-            // sort 
-
-            return true;
-        }
-    }
-
     return false;
 }
 
 template<typename T>
 T PriorityQueue<T>::remove(uint32_t key){
-    // simply set the key to -1 and let sort() fix the tree
+    if(this->isEmpty()){
+        throw "Removal attempted on empty queue!";
+    }
+
     for(Node& i : this->data){
         if(i.key == key){
-            return i.value;
+            T copy = i.value;
+            
+            // swap node to remove with last node for trival removal
+            i = this->data.back();
+
+            // We now have a dupe of last node, remove it and sort
+            this->data.pop_back();
+            this->size--;
+            
+            // skip sort if trival
+            if(this->size <= 1){
+                return copy;
+            }
+
+            this->sort();
+
+            return copy;
         }
     }
-    throw "Key not in queue";
+    throw "Key not in queue!";
 }
 
 template<typename T>
 T PriorityQueue<T>::removeIndex(int index){
-    (void)index;
-    throw "Not implemented";
+    if(this->isEmpty()){
+        throw "Removal attempted on empty queue!";
+    } else if(this->size <= index && index <= 0){
+        throw "Removal index is out of bounds of queue";
+    }
+
+    Node& removalNode = this->data[index];
+
+    T copy = removalNode.value;
+
+    // swap removalNode with last node for trival removal
+    removalNode = this->data.back();
+
+    // We now have a dupe of last node, remove it and sort
+    this->data.pop_back();
+    this->size--;
+
+    this->sort();
+
+    return copy;
 }
 
 template<typename T>
 uint32_t PriorityQueue<T>::minKey(){
-    return this->data[0].key;
+    if(this->isEmpty()){
+        throw "Calling for minKey on empty queue!";
+    }
+    return this->data.front().key;
 }
 
 template<typename T>
 T PriorityQueue<T>::minElement(){
     if(this->isEmpty()){
-        throw "Empty tree";
+        throw "Calling for minElement on empty queue!";
     }
-
-    return this->data[0].value;
+    throw "Not Implemented";
 }
 
 template<typename T>
@@ -92,25 +119,50 @@ T PriorityQueue<T>::removeMin(){
 
 template<typename T>
 void PriorityQueue<T>::traverse() const {
-    // get number of levels for formatting the output better
-    int len = this->length();
-    int levels = std::floor(std::log2(len)) + 1;
+    for (Node i : this->data){
+        std::cout << i.key << ", ";
+    }
+    std::cout << std::endl;
+}
 
-    for(int i = 0; i < levels; i++){
-        int elements = 1 << i;
-        for(int j = i; j < elements; j++){
-            std::cout << this->data[j].key << " " << "SOMEVALUE" << "\t";
-        }
-        std::cout << std::endl;
-        
-        for(int j = i; j < elements; j++){
-            std::cout << "/\t\\\t";
-        }
-        
-        std::cout << std::endl;
+template<typename T>
+void PriorityQueue<T>::heapify(int n, int i){
+    int max = i;
+    int left = 2 * i + 1;
+    int right = 2 * i + 2;
+
+    if(left < n && this->data[left] > this->data[max]){
+        max = left;
     }
 
-    std::cout << std::endl;
+    if(right < n && this->data[right] > this->data[max]){
+        max = right;
+    }
+
+    if(max != i){
+        std::swap(this->data[i], this->data[max]);
+        heapify(n, max);
+    }
+}
+
+template<typename T>
+void PriorityQueue<T>::sort(){
+    if(this->length() <= 1){ return; }
+
+    int n = this->length();
+
+    // this loop is O(n / 2 - 1) = O(n)
+    for(int i = n / 2 - 1; i >= 0; i--){
+        this->heapify(n, i); // O(log n)
+    }
+
+    // this loop is O(n - 1) = O(n)
+    for(int i = n - 1; i > 0; i--){
+        std::swap(this->data[0], this->data[i]);
+        this->heapify(i, 0); // O(log n)
+    }
+    
+    // calling a O(log n) function n times, therefore sort() has O(n log n)
 }
 
 }

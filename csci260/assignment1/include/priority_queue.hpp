@@ -15,6 +15,9 @@ public:
   struct Node {
     uint32_t key;
     T value;
+
+    bool operator<(const Node& o) const { return this->key < o.key; }
+    bool operator>(const Node& o) const { return this->key > o.key; }
   };
 
   PriorityQueue();
@@ -27,18 +30,18 @@ public:
   T minElement();
   T removeMin();
   int length() const { return this->size; }
-  bool isEmpty() const { return this->empty; }
-  bool isFull() const { return this->full; }
+  bool isEmpty() const { return this->size <= 0; }
+  bool isFull() const { return this->length() == MAX_SIZE; }
   void traverse() const;
+  void sort();
 
 private:
   void initialize();
+  void heapify(int n, int i);
 
-  const int MAX_SIZE = 64;
+  const int MAX_SIZE = 16;
   std::vector<Node> data;
-  int size;
-  bool empty;
-  bool full;
+  int size = 0;
 };
 
 }  // namespace adt
