@@ -1,4 +1,5 @@
-include config.mk
+
+TARGET := pxe1
 
 CXX := g++
 CXXFLAGS := -std=c++20 -Wall -Wextra
