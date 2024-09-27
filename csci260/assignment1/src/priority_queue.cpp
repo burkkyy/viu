@@ -15,7 +15,7 @@ namespace adt {
 
 template<typename T>
 PriorityQueue<T>::PriorityQueue(){
-    this->initialize();
+  this->initialize();
 }
 
 template<typename T>
@@ -30,144 +30,133 @@ void PriorityQueue<T>::initialize(){
 
 template<typename T>
 bool PriorityQueue<T>::insert(uint32_t key, T value){
-    if(this->isFull()){
-        return false;
-    } else if(this->size < this->MAX_SIZE){        
-        this->data.push_back({key, value});
-        this->size++;
-        this->sort();
-        return true;
-    }
+  if(this->isFull()){
     return false;
+  }
+
+  this->data.push_back({key, value});
+  this->size++;
+
+  int i = this->size - 1;
+
+  while(i != 0 && this->data[i] < this->data[(i - 1) / 2]){
+    std::swap(this->data[i], this->data[(i - 1) / 2]);
+    i = (i - 1) / 2;
+  }
+  return true;
 }
 
 template<typename T>
 T PriorityQueue<T>::remove(uint32_t key){
-    if(this->isEmpty()){
-        throw "Removal attempted on empty queue!";
+  if(this->isEmpty()){
+    throw "Removal attempted on empty queue!";
+  }
+
+  for(int i = 0; i < this->size; i++){
+    if(this->data[i].key == key){
+      return this->removeIndex(i);
     }
+  }
 
-    for(Node& i : this->data){
-        if(i.key == key){
-            T copy = i.value;
-            
-            // swap node to remove with last node for trival removal
-            i = this->data.back();
-
-            // We now have a dupe of last node, remove it and sort
-            this->data.pop_back();
-            this->size--;
-            
-            // skip sort if trival
-            if(this->size <= 1){
-                return copy;
-            }
-
-            this->sort();
-
-            return copy;
-        }
-    }
-    throw "Key not in queue!";
+  throw "Key not in queue!";
 }
 
 template<typename T>
 T PriorityQueue<T>::removeIndex(int index){
-    if(this->isEmpty()){
-        throw "Removal attempted on empty queue!";
-    } else if(this->size <= index && index <= 0){
-        throw "Removal index is out of bounds of queue";
-    }
+  if(this->isEmpty()){
+    throw "Removal attempted on empty queue!";
+  } else if(this->size <= index && index <= 0){
+    throw "Removal index is out of bounds of queue";
+  }
 
-    Node& removalNode = this->data[index];
+  this->data[index].key = 0; // lowest key value
 
-    T copy = removalNode.value;
-
-    // swap removalNode with last node for trival removal
-    removalNode = this->data.back();
-
-    // We now have a dupe of last node, remove it and sort
-    this->data.pop_back();
-    this->size--;
-
-    this->sort();
-
-    return copy;
+  // bubble to the top and let removeMin deal with it.
+  // Really we dont need these checks. This is allowed since 
+  // we can safelly assume min heap property in the queue
+  while (index > 0 && this->data[index].key <= this->data[(index - 1) / 2].key){
+    std::swap(this->data[index], this->data[(index - 1) / 2]);
+    index = (index - 1) / 2;
+  }
+  return this->removeMin();
 }
 
 template<typename T>
 uint32_t PriorityQueue<T>::minKey(){
-    if(this->isEmpty()){
-        throw "Calling for minKey on empty queue!";
-    }
-    return this->data.front().key;
+  if(this->isEmpty()){
+    throw "Calling for minKey on empty queue!";
+  }
+  return this->data.front().key;
 }
 
 template<typename T>
 T PriorityQueue<T>::minElement(){
-    if(this->isEmpty()){
-        throw "Calling for minElement on empty queue!";
-    }
-    throw "Not Implemented";
+  if(this->isEmpty()){
+    throw "Calling for minElement on empty queue!";
+  }
+  throw "Not Implemented";
 }
 
 template<typename T>
 T PriorityQueue<T>::removeMin(){
-    uint32_t key = this->minKey();
-    return this->remove(key);
+  if(this->isEmpty()){
+    throw "Empty queue";
+  } else if(this->size == 1){
+    T copy = this->data.front().value;
+    this->data.pop_back();
+    this->size--;
+    return copy;
+  }
+
+  T copy = this->data.front().value;
+  std::swap(this->data[0], this->data[this->size - 1]);
+
+  this->data.pop_back();
+  this->size--;
+
+  // ensure min heap
+  this->heapify(0);
+
+  return copy;
 }
 
 template<typename T>
 void PriorityQueue<T>::traverse() const {
-    for (Node i : this->data){
-        std::cout << i.key << ", ";
-    }
-    std::cout << std::endl;
+  for (Node i : this->data){
+    std::cout << "{ Priority: " << i.key << ", " << i.value << " }, ";
+  }
+  std::cout << std::endl;
 }
 
 template<typename T>
-void PriorityQueue<T>::heapify(int n, int i){
-    int max = i;
-    int left = 2 * i + 1;
-    int right = 2 * i + 2;
+void PriorityQueue<T>::heapify(int i){
+  // all this does is take data[i] as the root node 
+  // and esures data[i] is smallest key in the tree (technically subtree)
 
-    if(left < n && this->data[left] > this->data[max]){
-        max = left;
-    }
+  int left = 2 * i + 1;
+  int right = 2 * i + 2;
+  int min = i;
 
-    if(right < n && this->data[right] > this->data[max]){
-        max = right;
-    }
+  if(left < this->size && this->data[left] < this->data[min]){
+    min = left;
+  }
 
-    if(max != i){
-        std::swap(this->data[i], this->data[max]);
-        heapify(n, max);
-    }
-}
+  if(right < this->size && this->data[right] < this->data[min]){
+    min = right;
+  }
 
-template<typename T>
-void PriorityQueue<T>::sort(){
-    if(this->length() <= 1){ return; }
+  // if min == i we are at root and therefore already 
+  // the smallest key found in each subtree
+  if(min != i){
+    std::swap(this->data[i], this->data[min]);
 
-    int n = this->length();
-
-    // this loop is O(n / 2 - 1) = O(n)
-    for(int i = n / 2 - 1; i >= 0; i--){
-        this->heapify(n, i); // each call is O(log n)
-    } // overall O(n)
-
-    // this loop is O(n - 1) = O(n)
-    for(int i = n - 1; i > 0; i--){
-        std::swap(this->data[0], this->data[i]);
-        this->heapify(i, 0); // O(log n)
-    }
-
-    /*
-    Overall time complexity:
-        - O(n) for "building" the heap
-        - O(n log n) for sorting
-    Therefore O(n log n) overall
-    */
+    // We know which child has smaller key,
+    // simply assume that to be the root node 
+    // of some subtree and check its children
+    // for any smaller keys (recursive impl is alot simplier)
+    heapify(min);
+    // when this returns we are the smallest key in all subtrees
+  }
 }
 
 }

@@ -33,11 +33,10 @@ public:
   bool isEmpty() const { return this->size <= 0; }
   bool isFull() const { return this->length() == MAX_SIZE; }
   void traverse() const;
-  void sort();
 
 private:
   void initialize();
-  void heapify(int n, int i);
+  void heapify(int i);
 
   const int MAX_SIZE = 16;
   std::vector<Node> data;
