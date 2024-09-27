@@ -17,9 +17,13 @@ $(OBJECT_FILES): $(SOURCE_FILES) $(HEADER_FILES)
 $(TARGET): main.cpp $(OBJECT_FILES)
 	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) $^ -o $@
 
-.PHONY: all clean
+.PHONY: all clean test
 all: $(OBJECT_FILES)
 all: $(TARGET)
+
+test.bin: tests/test.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) $^ -o $@
+	time ./test.bin
 
 clean:
 	@-rm -rf build/ 2>/dev/null

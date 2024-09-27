@@ -42,8 +42,6 @@ uint32_t Manager::calculatePriority(uint16_t uid, double estimated_execution_tim
 }
 
 void Manager::submit(double estimated_execution_time, uint16_t uid, std::string command_name, std::string resource_list){
-  // ask for input?
-
   // calculate priority
   uint32_t priority = calculatePriority(uid, estimated_execution_time);
   
