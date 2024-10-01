@@ -1,0 +1,43 @@
+module adder(a, b, s1, s0);
+  input a, b;
+  output s1, s0;
+
+  assign s1 = a & b;
+  assign s0 = a ^ b;
+
+endmodule
+
+module display(s1, s0, a, b, c, d, e, f, g);
+  input s1, s0;
+  output a, b, c, d, e, f, g;
+
+  assign a = ~s0;
+  assign b = 1;
+  assign c = ~s1;
+  assign d = ~s0;
+  assign e = ~s0;
+  assign f = ~s1 & ~s0;
+  assign g = s1 & ~s0;
+
+endmodule
+
+module adder_display(x, y, a, b, c, d, e, f, g);
+  input x, y;
+  output a, b, c, d, e, f, g;
+  wire w1, w0;
+
+  adder U1(x, y, w1, w0);
+  display U2(w1, w0, a, b, c, d, e, f, g);
+
+endmodule
+
+module main();
+
+initial
+  begin
+    $display("Hello world");
+    $finish ;
+  end
+
+endmodule
+
