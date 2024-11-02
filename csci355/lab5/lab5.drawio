@@ -1,0 +1,19 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="MCs8qswct6qtLb018VDK">
+    <mxGraphModel dx="869" dy="845" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="583" pageHeight="413" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1oF_wICkZpUbgNaAOY_s-1" value="Why is a multi-bit adder processed from the least-significant bit to the mostsignificant bit while a multi-bit comparator is processed from the mostsignificant bit to the least-significant bit?" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="20" width="560" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1oF_wICkZpUbgNaAOY_s-2" value="4.2 Write the decimal number 7129 in different representationsin Verilog HDL:" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="716" y="25" width="450" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1oF_wICkZpUbgNaAOY_s-3" value="&lt;b&gt;Binary&lt;/b&gt;&amp;nbsp;&lt;div&gt;reg[15:0] number = 16&#39;b1101111011001;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Octal&lt;/b&gt;&lt;/div&gt;&lt;div&gt;reg[15:0] number = 16&#39;o15731;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Hex&lt;/b&gt;&lt;/div&gt;&lt;div&gt;reg[15:0] number = 16&#39;h1bd9;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Decimal&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;reg[15:0] number = 16&#39;d7129;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="800" y="65" width="240" height="170" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
