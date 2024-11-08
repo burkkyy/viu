@@ -17,7 +17,17 @@ private:
   void initialize();
   void execute(const std::string& command);
   void printHelp();
-  void submitWrapper();
+  
+  /* 
+    Wrappers for manager.
+    This is done so console input is proccessed 
+    so it can be passed to manager
+  */
+  void subscribeWrapper();
+  void unsubscribeWrapper();
+  void showWrapper();
+  void listWrapper();
+  void spamWrapper();
 
   Manager manager;
   bool running = true;

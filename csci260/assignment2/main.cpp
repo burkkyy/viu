@@ -7,7 +7,7 @@ int main(int argc, const char** argv){
   (void) argv;
   
   try {
-    job::Console console;
+    Console console;
 
     console.run();
     

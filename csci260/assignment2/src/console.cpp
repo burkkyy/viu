@@ -24,15 +24,15 @@ void Console::execute(const std::string& command){
   if(command == "help"){
     printHelp();
   } else if(command == "subscribe"){
-    this->manager.subscribe();
+    subscribeWrapper();
   } else if(command == "unsubscribe"){
-    this->manager.unsubscribe();
+    unsubscribeWrapper();
   } else if(command == "show"){
-    this->manager.show();
+    showWrapper();
   } else if(command == "list"){
-    this->manager.list();
+    listWrapper();
   } else if(command == "spam"){
-    this->manager.spam();
+    spamWrapper();
   } else if(command == "quit"){
     this->manager.quit();
     this->running = false;
@@ -41,16 +41,40 @@ void Console::execute(const std::string& command){
   }
 }
 
-void Console::printHelp(){
+void Console::printHelp() {
   std::cout << "Available commands: " << std::endl;
-  std::cout << "\tsubmit\t\topens console to submit a new job to queue" << std::endl;
-  std::cout << "\texecute\t\truns highest priority job" << std::endl;
-  std::cout << "\tlottery\t\truns random job" << std::endl;
-  std::cout << "\tprint\t\tprints out all jobs" << std::endl;
-  std::cout << "\tquit\t\texits program" << std::endl;
-  std::cout << "\thelp\t\tprints this message" << std::endl;
+  std::cout << "\tsubscribe\t\tsubscribe a new customer" << std::endl;
+  std::cout << "\tshow\t\t\tdisplay information of a customer by ID" << std::endl;
+  std::cout << "\tlist\t\t\tlist all customer IDs and names" << std::endl;
+  std::cout << "\tspam\t\t\tlist emails and names of active customers" << std::endl;
+  std::cout << "\tunsubscribe\t\tset customer status to inactive" << std::endl;
+  std::cout << "\tquit\t\t\texit the program" << std::endl;
 }
 
 void Console::initialize(){
   printHelp();
+}
+
+void Console::subscribeWrapper(){
+  std::string email;
+  std::cout << "Enter customer email: ";
+  std::getline(std::cin, email);
+
+  this->manager.subscribe(email);
+}
+
+void Console::unsubscribeWrapper(){
+  throw "Not Implemented";
+}
+
+void Console::showWrapper(){
+  throw "Not Implemented";
+}
+
+void Console::listWrapper(){
+  throw "Not Implemented";
+}
+
+void Console::spamWrapper(){
+  this->manager.spam();
 }

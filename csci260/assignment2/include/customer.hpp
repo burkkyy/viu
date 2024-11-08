@@ -1,10 +1,13 @@
 #pragma once
 
+#include <iostream>
 #include <cstdint>
 #include <string>
 
+using CUSTOMER_ID = uint64_t;
+
 struct Customer {
-  uint64_t id;
+  CUSTOMER_ID id;
   std::string email;
   std::string name;
   bool active;
