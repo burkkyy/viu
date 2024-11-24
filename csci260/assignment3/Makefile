@@ -2,9 +2,17 @@ CXX := g++
 CXXFLAGS := -std=c++20 -Wall -Wextra
 CXXINCLUDES := -I ./include
 
-OBJECT_FILES := build/manager.o build/console.o
+OBJECT_FILES := build/graph.o build/analyzer.o
 
-default: pxe2
+default: pxe3
+
+build/graph.o: src/graph.cpp
+	@mkdir -p $(dir $@)
+	$(CXX) -c $(CXXFLAGS) $(CXXINCLUDES) $^ -o $@
+
+build/analyzer.o: src/analyzer.cpp
+	@mkdir -p $(dir $@)
+	$(CXX) -c $(CXXFLAGS) $(CXXINCLUDES) $^ -o $@
 
 build/manager.o: src/manager.cpp
 	@mkdir -p $(dir $@)
