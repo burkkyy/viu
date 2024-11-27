@@ -1,0 +1,25 @@
+[*]
+[*] GTKWave Analyzer v3.3.120 (w)1999-2024 BSI
+[*] Wed Nov 27 00:17:59 2024
+[*]
+[dumpfile] "/home/caleb/viu/csci355/lab7/build/moore62_tb.vcd"
+[dumpfile_mtime] "Wed Nov 27 00:16:44 2024"
+[dumpfile_size] 1498
+[savefile] "/home/caleb/viu/csci355/lab7/timing_diagrams/timingzzz.gtkw"
+[timestart] 0
+[size] 2550 1360
+[pos] -1 -1
+*-5.138471 283 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] moore62_tb.
+[sst_width] 273
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 408
+@28
+moore62_tb.clk
+moore62_tb.w
+moore62_tb.z
+@29
+moore62_tb.reset
+[pattern_trace] 1
+[pattern_trace] 0
