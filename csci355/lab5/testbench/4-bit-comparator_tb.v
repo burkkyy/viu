@@ -20,8 +20,14 @@ module fourBitComparator_tb ();
     a = 4'b0100;
     b = 4'b0111;
       #20;
-    a = 4'b1001;
-    b = 4'b1001;
+    a = 4'b0001;
+    b = 4'b1111;
+      #20;
+    a = 4'b1111;
+    b = 4'b0000;
+      #20;
+    a = 4'b1111;
+    b = 4'b1111;
       #20;
 
   $display("Test complete");

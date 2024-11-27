@@ -3,7 +3,7 @@
 
 module thirtyTwoBitAdder_tb ();
   reg[31:0] x, y;
-  wire ci;
+  reg ci;
   wire[31:0] f;
   wire co;
 
@@ -13,8 +13,22 @@ module thirtyTwoBitAdder_tb ();
     $dumpfile("32BitAdder_tb.vcd");
     $dumpvars(0, thirtyTwoBitAdder_tb);
 
-    x = 0;
-    y = 0;
+    ci = 1'b0;
+
+    x = 32'd0;
+    y = 32'd0;
+      #20;
+    x = 32'd124;
+    y = 32'd1441;
+      #20;
+    x = 32'd412412;
+    y = 32'd90809;
+      #20;
+    x = 32'd4294967295;
+    y = 32'd0;
+      #20;
+    x = 32'd4294967295;
+    y = 32'd1;
       #20;
 
   $display("Test complete");

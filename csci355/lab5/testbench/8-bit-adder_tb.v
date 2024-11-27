@@ -3,7 +3,7 @@
 
 module eightBitAdder_tb ();
   reg [7:0] x, y;
-  wire ci;
+  reg ci;
   wire [7:0] s;
   wire co;
 
@@ -13,20 +13,22 @@ module eightBitAdder_tb ();
     $dumpfile("8BitAdder_tb.vcd");
     $dumpvars(0, eightBitAdder_tb);
 
-    x = 32'd0;
-    y = 32'd0;
+    ci = 1'b0;
+
+    x = 8'd0;
+    y = 8'd0;
       #20;
-    x = 32'd124;
-    y = 32'd1441;
+    x = 8'd1;
+    y = 8'd3;
       #20;
-    x = 32'd412412;
-    y = 32'd90809;
+    x = 8'd12;
+    y = 8'd9;
       #20;
-    x = 32'd4294967295;
-    y = 32'd0;
+    x = 8'd15;
+    y = 8'd123;
       #20;
-    x = 32'd4294967295;
-    y = 32'd1;
+    x = 8'd243;
+    y = 8'd10;
       #20;
     $display("Test complete");
   end

@@ -1,0 +1,298 @@
+$date
+	Fri Nov  1 20:12:04 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module eightBitAdder_tb $end
+$var wire 8 ! s [7:0] $end
+$var wire 1 " co $end
+$var reg 1 # ci $end
+$var reg 8 $ x [7:0] $end
+$var reg 8 % y [7:0] $end
+$scope module ut $end
+$var wire 1 # ci $end
+$var wire 8 & x [7:0] $end
+$var wire 8 ' y [7:0] $end
+$var wire 8 ( s [7:0] $end
+$var wire 1 " co $end
+$scope module f0 $end
+$var wire 1 ) a1 $end
+$var wire 1 * a2 $end
+$var wire 1 + b1 $end
+$var wire 1 # ci $end
+$var wire 1 , co $end
+$var wire 1 - so $end
+$var wire 1 . xi $end
+$var wire 1 / yi $end
+$upscope $end
+$scope module f1 $end
+$var wire 1 0 a1 $end
+$var wire 1 1 a2 $end
+$var wire 1 2 b1 $end
+$var wire 1 , ci $end
+$var wire 1 3 co $end
+$var wire 1 4 so $end
+$var wire 1 5 xi $end
+$var wire 1 6 yi $end
+$upscope $end
+$scope module f2 $end
+$var wire 1 7 a1 $end
+$var wire 1 8 a2 $end
+$var wire 1 9 b1 $end
+$var wire 1 3 ci $end
+$var wire 1 : co $end
+$var wire 1 ; so $end
+$var wire 1 < xi $end
+$var wire 1 = yi $end
+$upscope $end
+$scope module f3 $end
+$var wire 1 > a1 $end
+$var wire 1 ? a2 $end
+$var wire 1 @ b1 $end
+$var wire 1 : ci $end
+$var wire 1 A co $end
+$var wire 1 B so $end
+$var wire 1 C xi $end
+$var wire 1 D yi $end
+$upscope $end
+$scope module f4 $end
+$var wire 1 E a1 $end
+$var wire 1 F a2 $end
+$var wire 1 G b1 $end
+$var wire 1 A ci $end
+$var wire 1 H co $end
+$var wire 1 I so $end
+$var wire 1 J xi $end
+$var wire 1 K yi $end
+$upscope $end
+$scope module f5 $end
+$var wire 1 L a1 $end
+$var wire 1 M a2 $end
+$var wire 1 N b1 $end
+$var wire 1 H ci $end
+$var wire 1 O co $end
+$var wire 1 P so $end
+$var wire 1 Q xi $end
+$var wire 1 R yi $end
+$upscope $end
+$scope module f6 $end
+$var wire 1 S a1 $end
+$var wire 1 T a2 $end
+$var wire 1 U b1 $end
+$var wire 1 O ci $end
+$var wire 1 V co $end
+$var wire 1 W so $end
+$var wire 1 X xi $end
+$var wire 1 Y yi $end
+$upscope $end
+$scope module f7 $end
+$var wire 1 Z a1 $end
+$var wire 1 [ a2 $end
+$var wire 1 \ b1 $end
+$var wire 1 V ci $end
+$var wire 1 " co $end
+$var wire 1 ] so $end
+$var wire 1 ^ xi $end
+$var wire 1 _ yi $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0_
+0^
+0]
+0\
+0[
+0Z
+0Y
+0X
+0W
+0V
+0U
+0T
+0S
+0R
+0Q
+0P
+0O
+0N
+0M
+0L
+0K
+0J
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+0#
+0"
+b0 !
+$end
+#20
+b100 !
+b100 (
+1;
+13
+12
+1,
+11
+1)
+1/
+16
+1.
+b11 %
+b11 '
+b1 $
+b1 &
+#40
+0B
+03
+0:
+1I
+02
+0,
+1-
+09
+b10101 !
+b10101 (
+1;
+1A
+01
+0)
+1*
+18
+1>
+06
+1D
+0.
+1<
+1C
+b1001 %
+b1001 '
+b1100 $
+b1100 &
+#60
+1]
+1V
+1U
+1O
+1B
+1N
+1:
+1H
+14
+19
+0;
+1G
+0I
+0P
+0W
+1,
+b10001010 !
+b10001010 (
+0-
+13
+1F
+1M
+1T
+1)
+0*
+10
+16
+1K
+1R
+1Y
+1.
+15
+b1111011 %
+b1111011 '
+b1111 $
+b1111 &
+#80
+0V
+0U
+1W
+0O
+0N
+1P
+0H
+0G
+1I
+0A
+04
+0:
+0"
+0,
+1-
+09
+1;
+0@
+1B
+0\
+b11111101 !
+b11111101 (
+1]
+0)
+1*
+08
+0>
+1?
+1[
+0/
+0K
+0R
+0Y
+0<
+0C
+1J
+1Q
+1X
+1^
+b1010 %
+b1010 '
+b11110011 $
+b11110011 &
+#100
