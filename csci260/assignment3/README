@@ -1,0 +1,61 @@
+# CSCI 260 Assignment 3
+
+## 1. Usage
+
+```bash
+./pxe3 <INPUT-FILE> <OUTPUT-FILE>
+```
+
+## 2. Specification
+
+Functionality found in `include/analzer.hpp`:
+
+- `read(filename)` - reads contentes from input file and creates graph representation from infrastructure data
+- `analyze()` - Performs analyzsis of infrastructure data most recently loaded from `read(...)`
+- `dump(filename)` - Dumps the contents of the analysis to output file
+
+## 3. Design / Implementation
+
+### 3.1 Infrastructure
+
+Infrastructure data is broken down into
+
+- Infrastructure data is stored in a weighted undirected graph ADT
+- Server names are the verticies on the graph
+- The connections between servers are the edges on the graph, the weights of the edges are the cost of the connection.
+- The volume of a connection is stored in the edge aswell but not used in graph ADT
+
+### 3.2 Infrastructure demands
+
+Infrastructure demands data is broken down into
+
+- Each infrastructure demand is stored in a `CommunicationDemand` ADT (see `include/analyzer.hpp:32`)
+- All demands are added to an array ADT
+
+### 3.3 Anaysis
+
+Anaysis works by heavily utilizing dijkstra's algorithm.
+
+For each infrastructure demand,
+
+1. We find shorest path from two servers via dijkstra's algorithm
+2. If any server has an infinite weight then the connection is missing
+3. On each step of the shorest path, note if the volume of some server connection on that path is smaller then the demand volume
+
+## Accomplishment
+
+- Program compilies with zero errors or warnings
+- Performs analysis of missing connections
+- Performs analysis of connections requiring a volume increase to use the lowest cost path
+
+## Testing
+
+Code tested on input `data/*`
+
+## Know Bugs
+
+- Not really a bug but any invalid data in an input file is just ignored, error messages are not helpful to a non dev user
+
+## Authors
+
+Caleb Burke
