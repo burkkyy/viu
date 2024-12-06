@@ -1,41 +1,14 @@
-Created servers:
-Vertex { Daisy, 0x5ccd2abb5a70 }
-Vertex { Heather, 0x5ccd2abb5a90 }
-Vertex { Iris, 0x5ccd2abb5ab0 }
-Vertex { Jasmine, 0x5ccd2abb5ad0 }
-Vertex { Rose, 0x5ccd2abb5af0 }
-Vertex { Violet, 0x5ccd2abb5b10 }
-createConnectionCost Daisy Iris 7.5 50
-v: 0x5ccd2abb5a70 u: 0x5ccd2abb5ab0
-Edge { 0x5ccd2abb5a70, 0x5ccd2abb5ab0 }
-createConnectionCost Daisy Heather 25.8 60
-v: 0x5ccd2abb5a70 u: 0x5ccd2abb5a90
-Edge { 0x5ccd2abb5a70, 0x5ccd2abb5ab0 }
-Edge { 0x5ccd2abb5a70, 0x5ccd2abb5a90 }
-createConnectionCost Daisy Violet 14.2 80
-v: 0x5ccd2abb5a70 u: 0x5ccd2abb5b10
-Edge { 0x5ccd2abb5a70, 0x5ccd2abb5ab0 }
-Edge { 0x5ccd2abb5a70, 0x5ccd2abb5a90 }
-Edge { 0x5ccd2abb5a70, 0x5ccd2abb5b10 }
-createConnectionCost Heather Jasmine 12.7 28
-v: 0x5ccd2abb5a90 u: 0x5ccd2abb5ad0
-Edge { 0x5ccd2abb5a70, 0x5ccd2abb5ab0 }
-Edge { 0x5ccd2abb5a70, 0x5ccd2abb5a90 }
-Edge { 0x5ccd2abb5a70, 0x5ccd2abb5b10 }
-Edge { 0x5ccd2abb5a90, 0x5ccd2abb5ad0 }
-createConnectionCost Iris Jasmine 8.3 75
-v: 0x5ccd2abb5ab0 u: 0x5ccd2abb5ad0
-Edge { 0x5ccd2abb5a70, 0x5ccd2abb5ab0 }
-Edge { 0x5ccd2abb5a70, 0x5ccd2abb5a90 }
-Edge { 0x5ccd2abb5a70, 0x5ccd2abb5b10 }
-Edge { 0x5ccd2abb5a90, 0x5ccd2abb5ad0 }
-Edge { 0x5ccd2abb5ab0, 0x5ccd2abb5ad0 }
-createConnectionCost Iris Violet 3.5 35
-v: 0x5ccd2abb5ab0 u: 0x5ccd2abb5b10
-Edge { 0x5ccd2abb5a70, 0x5ccd2abb5ab0 }
-Edge { 0x5ccd2abb5a70, 0x5ccd2abb5a90 }
-Edge { 0x5ccd2abb5a70, 0x5ccd2abb5b10 }
-Edge { 0x5ccd2abb5a90, 0x5ccd2abb5ad0 }
-Edge { 0x5ccd2abb5ab0, 0x5ccd2abb5ad0 }
-Edge { 0x5ccd2abb5ab0, 0x5ccd2abb5b10 }
-Server 1 name is missing
+4 // number of servers followed with 6 names
+A
+B
+C
+D
+
+2 // number of direct links: two server names, unit cost and volume capacity
+A B 7.5 50
+B C 25.8 60
+
+3 // number of communication demands: two server names, volume needed
+A C 10
+A D 1
+A B 1
