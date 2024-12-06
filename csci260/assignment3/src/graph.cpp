@@ -156,13 +156,13 @@ GRAPH_T::DijkstraResult GRAPH_T::dijkstra(Vertex& src){
     current = min_weight_i;
   }
 
-  std::cout << "\nIndex\tVertex\tWeight\tPrev" << std::endl;
-  std::cout << "-----\t------\t------\t----" << std::endl;
-  for(size_t i = 0; i < this->vertices.size(); i++){
-    std::cout << i << "\t" << this->vertices.at(i).data << "\t"
-    << d.weights.at(i) << 
-    "\t" << d.previouses.at(i) << std::endl;
-  }
+  // std::cout << "\nIndex\tVertex\tWeight\tPrev" << std::endl;
+  // std::cout << "-----\t------\t------\t----" << std::endl;
+  // for(size_t i = 0; i < this->vertices.size(); i++){
+  //   std::cout << i << "\t" << this->vertices.at(i).data << "\t"
+  //   << d.weights.at(i) << 
+  //   "\t" << d.previouses.at(i) << std::endl;
+  // }
 
   return d;
 }

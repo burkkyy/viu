@@ -7,10 +7,6 @@
 
 #define GRAPH_T Graph<T, U>
 
-// I found myself writting this funky code a ton
-#define __ENSURE_SAFE_DEF(ptr) \
-if(ptr == nullptr){ throw "Attempting to dereference a nullptr"; }
-
 // T: vertex data type
 // U: edge weight type
 template<typename T, typename U>
