@@ -1,0 +1,9 @@
+[project]
+name = "l1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pytictoc>=1.5.3",
+]

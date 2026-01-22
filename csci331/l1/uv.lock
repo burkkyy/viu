@@ -1,0 +1,23 @@
+version = 1
+revision = 3
+requires-python = ">=3.13"
+
+[[package]]
+name = "l1"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "pytictoc" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pytictoc", specifier = ">=1.5.3" }]
+
+[[package]]
+name = "pytictoc"
+version = "1.5.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/4c/be/7652410c5de4ab8a8fb16c52f824531ae8c697b13ca44b3ebbeac2cc005c/pytictoc-1.5.3.tar.gz", hash = "sha256:0722acd1ea60d8de31e7babeb11200d04067f94e7dece5e86e16ffd2eb7940cf", size = 4984, upload-time = "2023-08-02T20:08:15.354Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/fa/47/a802641f9efe9f774902383e6ca8f75af5531a1cd71c6e738dcb2c84118c/pytictoc-1.5.3-py2.py3-none-any.whl", hash = "sha256:df4547aa839f2e39f64e4aa0c4af3fe441e8cea6ecaecf239fb3f0daf1afc8cb", size = 4050, upload-time = "2023-08-02T20:08:12.855Z" },
+]
