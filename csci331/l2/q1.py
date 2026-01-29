@@ -17,9 +17,12 @@ class LabTwo:
         returns: BeautifulSoup object
         """
 
-        with open(fileName) as f:
-            xml = f.read()
-            return BeautifulSoup(xml, "html.parser")
+        try:
+            with open(fileName) as f:
+                xml = f.read()
+                return BeautifulSoup(xml, "html.parser")
+        except FileNotFoundError:
+            print(f"ERROR: cannot open {fileName}")
 
     def getPlayName(self, soup: BeautifulSoup) -> str:
         """
