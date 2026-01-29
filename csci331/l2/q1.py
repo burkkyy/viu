@@ -1,6 +1,6 @@
 # CSCI 331 - Lab 2
-# Author:
-# Date:
+# Author: Caleb Burke
+# Date: Jan 29th, 2026
 
 from bs4 import BeautifulSoup
 from pytictoc import TicToc
