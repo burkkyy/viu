@@ -24,50 +24,11 @@ class LabOne:
 
         print(self.al)
 
-    def convertFlatToRowWise(self, flat: list):
-        rows = []
-        i = 0
-        rowSize = 1
-        while i < len(flat):
-            rows.append(flat[i : i + rowSize])
-            i += rowSize
-            rowSize += 1
-        return rows
-
-    def pyramidSum(self, pyramid):
-        sum = 0
-        for row in pyramid:
-            for element in row:
-                sum += element
-        return sum
-
-    def pyramidSplit(self, pyramid):
-        l = []
-        r = []
-
-        for i in range(len(pyramid)):
-            row = pyramid[i]
-            l.extend(row[0:i])
-            r.extend(row[1 : i + 1])
-
-        lPyramid = self.convertFlatToRowWise(l)
-        rPyramid = self.convertFlatToRowWise(r)
-
-        return lPyramid, rPyramid
-
     def process(self) -> None:
-        self.result += self.al[0][0]
-
-        while len(self.al) > 1:
-            l, r = self.pyramidSplit(self.al)
-            if self.pyramidSum(l) < self.pyramidSum(r):
-                self.al = r
-            else:
-                self.al = l
-
-            self.result += self.al[0][0]
-
-        print(self.al)
+        for i in range(len(self.al) - 2, -1, -1):
+            for j in range(len(self.al[i])):
+                self.al[i][j] += max(self.al[i+1][j], self.al[i+1][j+1])
+        self.result = self.al[0][0]
 
     def getResult(self) -> int:
         return self.result
