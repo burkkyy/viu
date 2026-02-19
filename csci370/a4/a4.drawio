@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.3.8">
+  <diagram name="Page-1" id="jXCOqmlv4ZBnsizVOEGd">
+    <mxGraphModel dx="1426" dy="764" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XT0C5xJ1Y6wHnVOJZxkw-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;text-align: start; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;1.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;For any listing started in November 2025, show its listed property&#39;s civic address, its status, its listing realtor&#39;s service&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;name&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;and its asking price.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="660" x="15" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="XT0C5xJ1Y6wHnVOJZxkw-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium; text-align: start;&quot;&gt;Relational Algebra&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XT0C5xJ1Y6wHnVOJZxkw-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="&lt;b style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium; text-align: start;&quot;&gt;Datalog&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="80" x="10" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="XT0C5xJ1Y6wHnVOJZxkw-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium; text-align: start;&quot;&gt;SQL&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="20" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="XT0C5xJ1Y6wHnVOJZxkw-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium; text-align: start;&quot;&gt;Relational Algebra&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="10" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="XT0C5xJ1Y6wHnVOJZxkw-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="&lt;b style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium; text-align: start;&quot;&gt;Datalog&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="80" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="XT0C5xJ1Y6wHnVOJZxkw-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium; text-align: start;&quot;&gt;SQL&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="10" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="XT0C5xJ1Y6wHnVOJZxkw-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium; text-align: start;&quot;&gt;Relational Algebra&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="20" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="XT0C5xJ1Y6wHnVOJZxkw-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="&lt;b style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium; text-align: start;&quot;&gt;Datalog&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="80" x="15" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="XT0C5xJ1Y6wHnVOJZxkw-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium; text-align: start;&quot;&gt;SQL&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="XT0C5xJ1Y6wHnVOJZxkw-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium; text-align: start;&quot;&gt;Relational Algebra&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="25" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="XT0C5xJ1Y6wHnVOJZxkw-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="&lt;b style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium; text-align: start;&quot;&gt;Datalog&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="80" x="15" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="XT0C5xJ1Y6wHnVOJZxkw-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium; text-align: start;&quot;&gt;SQL&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="25" y="1230" as="geometry" />
+        </mxCell>
+        <mxCell id="XT0C5xJ1Y6wHnVOJZxkw-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium; text-align: start;&quot;&gt;Relational Algebra&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="25" y="1390" as="geometry" />
+        </mxCell>
+        <mxCell id="XT0C5xJ1Y6wHnVOJZxkw-23" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="&lt;b style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium; text-align: start;&quot;&gt;Datalog&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="80" x="15" y="1460" as="geometry" />
+        </mxCell>
+        <mxCell id="XT0C5xJ1Y6wHnVOJZxkw-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium; text-align: start;&quot;&gt;SQL&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="25" y="1590" as="geometry" />
+        </mxCell>
+        <mxCell id="XT0C5xJ1Y6wHnVOJZxkw-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;SELECT (property.civicAddress, realtor1.serviceName AS listingRealtor, realtor2.serviceName AS sellingRealtor, listing.askingPrice, closedListing.purchasePrice)&lt;/div&gt;&lt;div&gt;FROM Properties property&lt;/div&gt;&lt;div&gt;JOIN Listings listing ON property.folio = listing.folio&lt;/div&gt;&lt;div&gt;JOIN ClosedListings closedListing ON listing.listingID = closedListing.listingID&lt;/div&gt;&lt;div&gt;JOIN Realtors realtor1 ON listing.listedBy = realtor1.RID&lt;/div&gt;&lt;div&gt;JOIN Realtors realtor2 ON closedListing.soldBy = realtor2.RID&lt;/div&gt;&lt;div&gt;WHERE listing.listedBy &amp;lt;&amp;gt; closedListing.soldBy;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="750" x="59" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="XT0C5xJ1Y6wHnVOJZxkw-36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Result(sn, e) ::=&amp;nbsp;Realtors(r, sn, _, _, e), NOT f(r)" vertex="1">
+          <mxGeometry height="30" width="520" x="80" y="1500" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZjgM2vRjCUyMpVcS4Mv-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="2.&amp;nbsp;For each sold property that was listed and sold by different realtors, show its listed property&#39;s civic address, the service names of its listing realtor and sold by realtor respectively, and its asking price and purchasing price respectively" vertex="1">
+          <mxGeometry height="30" width="775" x="5" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZjgM2vRjCUyMpVcS4Mv-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="3. For each realtor who has more than 10 years of experience and who has listed at least one property in year 2025, show the realtor&#39;s service name and contact information.&amp;nbsp;There shouldn&#39;t be any duplicates in the result." vertex="1">
+          <mxGeometry height="30" width="800" x="10" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZjgM2vRjCUyMpVcS4Mv-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="4. For each realtor who listed at least one property in a year that&#39;s not 2025, show the realtor&#39;s service name and experience level.&amp;nbsp;There shouldn&#39;t be any duplicates in the result." vertex="1">
+          <mxGeometry height="30" width="810" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZjgM2vRjCUyMpVcS4Mv-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="5. For each realtor who had never listed any property in year 2025, list the realtor&#39;s service name and experience level" vertex="1">
+          <mxGeometry height="30" width="645" x="15" y="1330" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZjgM2vRjCUyMpVcS4Mv-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;SELECT DISTINCT (property.civicAddress, listing.status, realtor.serviceName, listing.askingPrice)&lt;/div&gt;&lt;div&gt;FROM Properties property, Listings listing, Realtors realtor&lt;/div&gt;&lt;div&gt;WHERE property.folio = listing.folio AND listing.listedBy = realtor.RID AND listing.listDate BETWEEN to_date(&quot;2025-11-01&quot;, &quot;YYYY-MM-DD&quot;) AND to_date(&quot;2025-11-30&quot;, &quot;YYYY-MM-DD&quot;);&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="660" x="84" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZjgM2vRjCUyMpVcS4Mv-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;SELECT DISTINCT (realtor.serviceName, realtor.contactInfo)&lt;/div&gt;&lt;div&gt;FROM Realtors realtor JOIN Listings listing ON realtor.RID = listing.listedBy&lt;/div&gt;&lt;div&gt;WHERE realtor.expLevel &amp;gt; 10 AND listing.listDate BETWEEN to_date(&quot;2025-01-01&quot;, &quot;YYYY-MM-DD&quot;) AND to_date(&quot;2025-12-31&quot;, &quot;YYYY-MM-DD&quot;);&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="805.62" x="5.000000000000005" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZjgM2vRjCUyMpVcS4Mv-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;SELECT DISTINCT (realtor.serviceName, realtor.expLevel)&lt;/div&gt;&lt;div&gt;FROM Realtors realtor JOIN Listings listing ON realtor.RID = listing.listedBy&lt;/div&gt;&lt;div&gt;WHERE listing.listDate &amp;lt; to_date(&quot;2025-01-01&quot;, &quot;YYYY-MM-DD&quot;) OR listing.listDate &amp;gt; to_date(&quot;2025-12-31&quot;, &quot;YYYY-MM-DD&quot;);&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="745" x="50" y="1240" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZjgM2vRjCUyMpVcS4Mv-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;SELECT (serviceName, expLevel) FROM Realtors&lt;/div&gt;&lt;div&gt;WHERE RID NOT IN (&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; SELECT listedBy FROM Listings&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; WHERE listDate BETWEEN to_date(&quot;2025-01-01&quot;, &quot;YYYY-MM-DD&quot;) AND to_date(&quot;2025-12-31&quot;, &quot;YYYY-MM-DD&quot;)&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;);&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="642.5" x="47.5" y="1590" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZjgM2vRjCUyMpVcS4Mv-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="f(r) ::= Listings(_, _, r, d, _, _, _), d &amp;lt;= &quot;2025-12-31&quot;, d &amp;gt;= &quot;2025-01-01&quot;" vertex="1">
+          <mxGeometry height="30" width="450" x="110" y="1470" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZjgM2vRjCUyMpVcS4Mv-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Result(sn, e) ::=&amp;nbsp;Realtors(r, sn, _, _, e), Listings(_, _, r, d, _, _, _), (d &amp;lt; &quot;2025-01-01&quot; ; d &amp;gt; &quot;2025-12-31&quot;)" vertex="1">
+          <mxGeometry height="30" width="565" x="110" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZjgM2vRjCUyMpVcS4Mv-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Result(c, s, sn, p) ::=&amp;nbsp;Properties(f, c, _, _, _), Listings(_, _, r, d, s, _, p), Realtors(r, sn, _, _, _), d &amp;gt;= &quot;2025-11-01&quot;, d &amp;lt;= &quot;2025-11-30&quot;" vertex="1">
+          <mxGeometry height="30" width="725" x="95" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZjgM2vRjCUyMpVcS4Mv-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Result(sn, i) ::=&amp;nbsp;Realtors(r, sn, _, _, e), Listings(_, _, r, d, _, _, _), e &amp;gt; 10, d &amp;lt;= &quot;2025-12-31&quot;, d &amp;gt;= &quot;2025-01-01&quot;" vertex="1">
+          <mxGeometry height="30" width="600" x="105" y="790" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
