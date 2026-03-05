@@ -1,6 +1,10 @@
 # CSCI 331 - Lab 3
 # Author: Caleb Burke
+<<<<<<< HEAD
 # Date: Feb 17th, 2026
+=======
+# Date: Feb 11th, 2026
+>>>>>>> b50f720 (stuff)
 
 from nltk.tokenize import wordpunct_tokenize
 from pytictoc import TicToc
