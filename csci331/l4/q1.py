@@ -26,7 +26,7 @@ class Lab4(UserList):
 
     def depth(self, l) -> int:
         max_depth = 0
-        for ele in self.data:
+        for ele in l:
             if isinstance(ele, UserList):
                 current_depth = ele.depth(ele) + 1
             else:
